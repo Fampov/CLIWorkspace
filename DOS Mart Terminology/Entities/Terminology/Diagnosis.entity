@@ -1,0 +1,139 @@
+schemaVersion: 0.1
+schemaType: entity
+
+name: Diagnosis
+persistenceType: table
+ContentId: 327911fb-1907-40cd-a1dc-67aba0bb508e
+businessDescription: "A Reference table containing International Classification of Diseases (ICD) codes.  The table contains ICD-9-CM and ICD-10-CM diagnosis codes.  © Copyright World Health Organization (WHO), 2020. All Rights Reserved."
+technicalDescription: ~
+isGlobalRead: true
+isGlobalWrite: false
+dataStore: "Snowflake EDW"
+databaseName: Shared
+schemaName: Terminology
+tableName: Diagnosis
+fields:
+- name: "Binding ID"
+  dataType: int
+  isPrimaryKey: false
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "This column is populated automatically."
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: true
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: f5b5692e-3064-40d0-8058-0d331bde062a
+  attributes: []
+  objectRelationships: []
+- name: "BindingNM"
+  dataType: varchar(255)
+  isPrimaryKey: false
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "This column is populated automatically."
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: true
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: 39cbfeb9-38ae-4e0f-80a5-d12792edb910
+  attributes: []
+  objectRelationships: []
+- name: "LastLoadDTS"
+  dataType: datetime2
+  isPrimaryKey: false
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "This column is populated automatically."
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: true
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: e3539f6a-1d2c-4b9b-9ffd-c25c245e76b9
+  attributes: []
+  objectRelationships: []
+- name: "DiagnosisCD"
+  dataType: varchar(255)
+  isPrimaryKey: true
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "Diagnosis Code"
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: false
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: 2cc627c2-4cb4-482a-bae7-ec687ee33b4a
+  attributes: []
+  objectRelationships: []
+- name: "UnformattedDiagnosisCD"
+  dataType: varchar(255)
+  isPrimaryKey: false
+  allowNulls: true
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "Unformatted diagnosis code"
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: false
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: 71ff4959-0c06-4b6d-8930-38da39cb2777
+  attributes: []
+  objectRelationships: []
+  - name: "CodeTypeCD"
+  dataType: varchar(255)
+  isPrimaryKey: true
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "Code type code (e.g. ICD9DX, CPT)"
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: false
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: aa5fc09c-57c8-49da-a1e0-dff852a719c7
+  attributes: []
+  objectRelationships: []
+- name: "ICDRevisionCD"
+  dataType: varchar(255)
+  isPrimaryKey: false
+  allowNulls: false
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "ICD revision code"
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: false
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: aa2991e7-e595-4edc-96da-09fdb78c665d
+  attributes: []
+  objectRelationships: []
+- name: "DiagnosisDSC"
+  dataType: varchar(255)
+  isPrimaryKey: false
+  allowNulls: true
+  dataSensitivity: None
+  status: "Active"
+  businessDescription: "Diagnosis code description"
+  technicalDescription: ~
+  isAutoIncrement: false
+  isSystemField: false
+  defaultValue: ~
+  excludeFromBaseView: false
+  contentId: 6e040644-b8ea-4ae5-acf5-364236148647
+  attributes: []
+  objectRelationships: []
+fieldMappings:[]
+fieldGroups: []
+attributes: []
+objectRelationships: []

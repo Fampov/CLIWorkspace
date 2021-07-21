@@ -1,0 +1,27 @@
+schemaVersion: 0.1
+schemaType: binding
+
+name: Patient
+type: python
+contentId: e72c4adc-5f3f-4abd-b0a3-6753a3244307
+description: ~
+status: Active
+sourceDatastore: "Snowflake EDW"
+destinationEntity:
+  destinationName: "Patient"
+  destinationType: local
+scripts:
+  - dataSource: Default
+    script: !script Patient.py
+loadType: Full
+sourceEntities: 
+- sourceName: SharedPersonPatient.Person.Patient
+  sourceAlias: ~
+  blocksLoad: false
+incrementalConfigurations: []
+incrementalsAllowAggregateFunctions: false
+objectRelationships: []
+attributes:
+- attributeName: ReviewedFLG
+  attributeType: bool
+  attributeValue: false

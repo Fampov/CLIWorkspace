@@ -1,0 +1,42 @@
+schemaVersion: 0.1
+schemaType: binding
+
+name: Diagnosis
+type: SQL
+contentId: e72c4adc-5f3f-4abd-b0a3-6753a3244307
+description: ~
+status: Active
+sourceDatastore: "Snowflake EDW"
+destinationEntity:
+  destinationName: "Diagnosis"
+  destinationType: local
+scripts:
+  - dataSource: Default
+    script: !script Diagnosis.sql
+loadType: Full
+sourceEntities: 
+- sourceName: Shared.Terminology.Code
+  sourceAlias: ~
+  blocksLoad: false
+- sourceName: Shared.Terminology.Attribute
+  sourceAlias: t1
+  blocksLoad: false
+- sourceName: Shared.Terminology.Attribute
+  sourceAlias: t2
+  blocksLoad: false
+- sourceName: Shared.Terminology.Term
+  sourceAlias: ~
+  blocksLoad: true
+- sourceName: Shared.Terminology.Code
+  sourceAlias: a
+  blocksLoad: false
+- sourceName: Shared.Terminology.CodeSystem
+  sourceAlias: c
+  blocksLoad: false
+incrementalConfigurations: []
+incrementalsAllowAggregateFunctions: false
+objectRelationships: []
+attributes:
+- attributeName: ReviewedFLG
+  attributeType: bool
+  attributeValue: false

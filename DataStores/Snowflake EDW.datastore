@@ -1,0 +1,11 @@
+schemaVersion: 0.1
+schemaType: datastore
+
+name: "Snowflake EDW"
+ContentId: 0b4a3bf1-bb32-48d9-8433-671d1e9ac119
+dataSystemType: Snowflake
+description: "Default EDW Connection for Snowflake"
+dataSystemVendor: "Health Catalyst"
+dataSystemVersion: '2016'
+attributes: []
+objectRelationships:[]

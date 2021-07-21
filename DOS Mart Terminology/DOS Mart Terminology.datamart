@@ -1,0 +1,21 @@
+schemaVersion: 0.1
+schemaType: datamart
+
+name: "DOS Mart Terminology"
+type: "Subject Area"
+contentId: c439f705-4143-45d7-8ae0-24654ca65ad4
+version: 1.0
+status: "Active"
+suite: Clinical
+description: "The Terminology DOS Mart is a repository containing standard reference information to be leveraged in the EDW. There are many standard code sets, value sets, and mappings that are installed and updated on a regular basis.
+The purpose of the content is to provide consistent and up-to-date displays for commonly used code sets. Additionally, the value sets can be used as building blocks for clinical applications and analytics.
+
+Please note, this DOS Mart contains standardized Health Catalyst content."
+defaultSourceDataStore: "Snowflake EDW"
+defaultDestinationDataSTore: "Snowflake EDW"
+defaultDestinationDatabase: Shared
+defaultSchemaPrefix: ~
+defaultSchema: Terminology
+SamTypeCode: App
+attributes: []
+objectRelationships:[]
